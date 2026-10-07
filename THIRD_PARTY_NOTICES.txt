@@ -1,0 +1,11 @@
+CJDist release includes runtime components from the Cangjie SDK 1.0.5.
+
+Original license and open-source notice materials are included under:
+
+licenses/cangjie/
+
+Components include:
+- libcangjie-runtime.dll
+- libboundscheck.dll
+
+See the original bundled materials for license terms.

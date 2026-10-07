@@ -1,0 +1,24 @@
+# CJDist v0.1 configuration example.
+
+[dist]
+name = "MyApp"
+entry = "target/release/bin/main.exe"
+output-dir = "dist/MyApp"
+
+[dist.runtime]
+mode = "dynamic"
+source = "build-sdk"
+
+[dist.files]
+include = [
+    "README.md",
+    "cjdist.toml"
+]
+dlls = []
+licenses = []
+
+[dist.verify]
+args = ["--version"]
+expected-exit-code = 0
+timeout-ms = 5000
+working-directory = "package-root"

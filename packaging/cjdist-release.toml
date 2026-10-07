@@ -1,0 +1,25 @@
+[dist]
+name = "cjdist-0.1.0"
+entry = "target/release/bin/cjdist.exe"
+output-dir = "release/cjdist-0.1.0-windows-x64"
+
+[dist.runtime]
+mode = "dynamic"
+source = "build-sdk"
+
+[dist.files]
+include = [
+    "README.md",
+    "THIRD_PARTY_NOTICES.txt"
+]
+dlls = []
+licenses = [
+    "LICENSE",
+    "licenses/cangjie"
+]
+
+[dist.verify]
+args = ["--version"]
+expected-exit-code = 0
+timeout-ms = 5000
+working-directory = "package-root"
